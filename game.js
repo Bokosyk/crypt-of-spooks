@@ -1,17 +1,20 @@
-const textElement = document.getElementById('text')
+const textElement = document.getElementById('story')
 const optionButtonsElement = document.getElementById('option-buttons')
 
 let state = {}
 
 function startGame() {
     state = {}
-    showTextNode()
+    showTextNode(1)
 }
 
 function showTextNode(textNodeIndex) {
     const textNode = textNodes.find(textNode => textNode.id === textNodeIndex)
     // Sets inner text to whatever is being displayed in textNodes
     textElement.innerText = textNode.text
+    while (optionButtonsElement.firstChild) {
+        optionButtonsElement.removeChild(optionButtonsElement.firstChild)
+    }
 }
 
 const textNodes = [
@@ -33,6 +36,9 @@ const textNodes = [
                 nextText: 2
             }
         ]
+    },
+    {
+        id: 2
     }
 ]
 
