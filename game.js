@@ -1,5 +1,5 @@
-const textElement = document.getElementById('story')
-const optionButtonsElement = document.getElementById('option-buttons')
+const textElement = document.getElementById('text')
+const optionButtonsElement = document.getElementById('options-buttons')
 
 let state = {}
 
@@ -12,6 +12,7 @@ function showTextNode(textNodeIndex) {
     const textNode = textNodes.find(textNode => textNode.id === textNodeIndex)
     // Sets inner text to whatever is being displayed in textNodes
     textElement.innerText = textNode.text
+    // Removes options
     while (optionButtonsElement.firstChild) {
         optionButtonsElement.removeChild(optionButtonsElement.firstChild)
     }
