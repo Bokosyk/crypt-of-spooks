@@ -87,8 +87,4 @@ const textNodes = [
     }
 ]
 
-function selectOption(option) {
-
-}
-
 startGame()
