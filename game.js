@@ -1,5 +1,5 @@
 const textElement = document.getElementById('text')
-const optionButtonsElement = document.getElementById('options-buttons')
+const optionButtonsElement = document.getElementById('option-buttons')
 
 let state = {}
 
@@ -29,7 +29,16 @@ function showTextNode(textNodeIndex) {
 }
 
 function showOption(option) {
-    return true
+    // Checks if we have a required state object (OR)
+    return option.requiredState == null || option.requiredState(state)
+}
+
+function selectOption(option) {
+    const nextTextNodeId = option.nextText
+    // Takes current state, add everything from options set state to it, and override anything that's already there
+    // Returns brand new object to set to our current state
+    state = Object.assign(state, option.setState)
+    showTextNode(nextTextNodeId)
 }
 
 const textNodes = [
@@ -44,10 +53,6 @@ const textNodes = [
             {
                 text: 'Take item',
                 setState: { item: true },
-                nextText: 2
-            },
-            {
-                text: 'Move right',
                 nextText: 2
             }
         ]
@@ -76,6 +81,9 @@ const textNodes = [
                 nextText: 3
             }
         ]
+    },
+    {
+        id: 3
     }
 ]
 
