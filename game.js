@@ -1,6 +1,6 @@
 const textElement = document.getElementById('text')
 const optionButtonsElement = document.getElementById('option-buttons')
-
+const textImage = document.getElementById('image')
 let state = {}
 
 function startGame() {
@@ -8,8 +8,14 @@ function startGame() {
     showTextNode(1)
 }
 
+
 function showTextNode(textNodeIndex) {
     const textNode = textNodes.find(textNode => textNode.id === textNodeIndex)
+    //Appends image to HTML using Image() constructor
+    var img = new Image()
+    img.src = textNode.img
+    textImage.appendChild(img)
+
     // Sets inner text to whatever is being displayed in textNodes
     textElement.innerText = textNode.text
     // Removes options
@@ -48,6 +54,7 @@ function selectOption(option) {
 const textNodes = [
     {
         id: 1,
+        img: 'https://raw.githubusercontent.com/Escape-The-Dungeon/Escape-The-Dungeon/main/client/public/images/Scene01.jpg',
         text: 'You are roused from a deep sleep by a drip of icy cold water splashing onto your face, soon discovering you are lying on the frigid floor of a damp cell. There is a dull ache in the back of your head as you recall being ambushed by an unknown assailant and, slowly, you get up. Are you still on the island of Statmos? Or are you some place else entirely? Determined to find out, you scan your surroundings for clues. The flickering light of a torch on the stone wall illuminates your path ahead, revealing an iron door mysteriously left open in front of you. You pry the torch from it’s rusty sconce on the wall, grateful for the light, and take a decisive step through the doorway as you courageously seek answers to your questions.',
         options: [
             {
@@ -255,19 +262,19 @@ const textNodes = [
                 text: 'Trade the item for a sword',
                 // Takes in current state and checks if we have what we need
                 requiredState: (currentState) => currentState.item,
-                setState: {item: false, sword: true},
+                setState: { item: false, sword: true },
                 nextText: 3
             },
             {
                 text: 'Trade the item for a shield',
                 // Takes in current state and checks if we have what we need
                 requiredState: (currentState) => currentState.item,
-                setState: {item: false, shield: true},
+                setState: { item: false, shield: true },
                 nextText: 3
             },
             {
                 text: 'Ignore the merchant',
-                setState: {item: false, shield: true},
+                setState: { item: false, shield: true },
                 nextText: 3
             }
         ]

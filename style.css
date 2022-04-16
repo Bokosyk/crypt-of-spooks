@@ -22,6 +22,12 @@ body {
     box-shadow: 0 0 10px 2px #FB6D10;
 }
 
+img {
+    width: 800px;
+    max-width: 100%;
+    
+}
+
 #text {
     font-size: 1.40rem; 
 }
