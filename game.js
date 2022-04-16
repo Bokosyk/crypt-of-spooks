@@ -54,7 +54,7 @@ function selectOption(option) {
 const textNodes = [
     {
         id: 1,
-        img: 'https://raw.githubusercontent.com/Escape-The-Dungeon/Escape-The-Dungeon/main/client/public/images/Scene01.jpg',
+        img: 'Assets/Day1-Ring.jpg',
         text: 'You are roused from a deep sleep by a drip of icy cold water splashing onto your face, soon discovering you are lying on the frigid floor of a damp cell. There is a dull ache in the back of your head as you recall being ambushed by an unknown assailant and, slowly, you get up. Are you still on the island of Statmos? Or are you some place else entirely? Determined to find out, you scan your surroundings for clues. The flickering light of a torch on the stone wall illuminates your path ahead, revealing an iron door mysteriously left open in front of you. You pry the torch from it’s rusty sconce on the wall, grateful for the light, and take a decisive step through the doorway as you courageously seek answers to your questions.',
         options: [
             {
