@@ -13,9 +13,9 @@ body {
 .container {
     width: 800px;
     max-width: 80%;
-    /* font-family: 'MedievalSharp', cursive; */
-    color: #2E2E41;
-    background-color: white;
+    font-family: sans-serif;
+    color: white;
+    background-color: #2E2E41;
     padding: 20px 30px;
     border-radius: 5px;
    
@@ -40,10 +40,10 @@ body {
     border: none;
     border-radius: 10px;
     color: white;
-    background-color: #333;
+    background-color: #4D3347;
     outline: none;
     padding: 0.5rem 1.8rem;
-    box-shadow: 0 0.3rem rgba(121, 121, 121, 0.65);
+    box-shadow: 0 0.3rem rgba(251, 109, 16, 0.65);
 }
 
 .btn:hover {
@@ -52,5 +52,5 @@ body {
 
 .btn:active {
     transform: translate(0, 0.3rem);
-    box-shadow: 0 0.1rem rgba(255, 255, 255, 0.65);
+    box-shadow: 0 0.1rem rgba(251, 109, 16, 0.65);
 }
