@@ -13,11 +13,17 @@ body {
 .container {
     width: 800px;
     max-width: 80%;
-    color: white;
-    background-color: #2E2E41;
-    padding: 10px;
+    /* font-family: 'MedievalSharp', cursive; */
+    color: #2E2E41;
+    background-color: white;
+    padding: 20px 30px;
     border-radius: 5px;
+   
     box-shadow: 0 0 10px 2px #FB6D10;
+}
+
+#text {
+    font-size: 1.40rem; 
 }
 
 .btn-grid {
