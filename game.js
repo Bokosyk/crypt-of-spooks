@@ -12,12 +12,12 @@ function startGame() {
 
 function showTextNode(textNodeIndex) {
     const textNode = textNodes.find(textNode => textNode.id === textNodeIndex)
+    const img = document.createElement('img')
 
     // Sets inner text to whatever is being displayed in textNodes
     textElement.innerText = textNode.text
 
     //Assigns image
-    const img = document.createElement('img')
     img.src = textNode.img
 
     // Removes options
@@ -39,7 +39,7 @@ function showTextNode(textNodeIndex) {
             optionButtonsElement.appendChild(button)
 
             //Loads image
-           textImage.appendChild(img)
+            textImage.appendChild(img)
         }
     })
 }
@@ -157,6 +157,7 @@ const textNodes = [
     },
     {
         id: 8,
+        img: 'Assets/Day1-Ring.jpg',
         text: 'The tunnel continues uphill and you grow increasingly more hopeful but little by little the tunnel grows narrower till you’re at the point where you have to push yourself through. But wait, is that light up ahead? You push yourself further and further into the narrow cave until you can’t move anymore. But that light, it’s just around the corner.. You think there must be another way out so you try to turn back but you find yourself stuck. You’ve wedged yourself too far inside. If only desperation hadn’t taken hold of you, you think to yourself as you wait out your long inevitable death. THE END',
         options: [
             {
