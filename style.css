@@ -10,6 +10,9 @@ body {
 }
 
 #navbar {
+    border: none;
+    background-color: transparent;
+    outline: none;
     width: 100%;
     padding: 10px 0px;
     text-align: center;
@@ -21,12 +24,13 @@ body {
 }
 
 
+
 .container {
     display: flex;
     text-align: center;
     flex-direction: column;
     margin: 3vh;
-    max-width: 80%;
+    max-width: 40%;
     font-family: sans-serif;
     color: white;
     background-color: #2E2E41;
@@ -34,6 +38,7 @@ body {
     border-radius: 5px;
     box-shadow: 0 0 10px 2px #FB6D10;
 }
+
 
 img {
     width: auto;
@@ -74,14 +79,19 @@ img {
     box-shadow: 0 0.1rem rgba(251, 109, 16, 0.65);
 }
 
-@media all and (min-width: 480px) and (max-width: 768px) { 
-   .container {
-       width: 90%;
+@media all and (min-width: 480px) and (max-width: 768px) {
+    .container {
+        width: 90%;
         max-width: 100%;
-   }
+    }
 }
 
-@media screen and (orientation:portrait) { 
+@media screen and (orientation:portrait) {
+
+    img {
+        height: auto;
+        width: auto;
+    }
 
     #text {
         font-size: 1.2rem;
@@ -90,4 +100,4 @@ img {
     .btn {
         font-size: 1.2rem;
     }
- }
+}

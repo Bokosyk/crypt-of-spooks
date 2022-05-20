@@ -8,8 +8,6 @@ function startGame() {
     showTextNode(1)
 }
 
-
-
 function showTextNode(textNodeIndex) {
     const textNode = textNodes.find(textNode => textNode.id === textNodeIndex)
     const img = document.createElement('img')
