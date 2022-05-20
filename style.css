@@ -16,9 +16,9 @@ body {
     justify-content: center;
     margin: auto;
     font-family: 'Henny Penny', cursive;
-    font-size:50px;
+    font-size: 50px;
     text-shadow: 2px 2px 5px whitesmoke;
-    background-image: linear-gradient(#333, rgba(255,0,0,0))
+    background-image: linear-gradient(#333, rgba(255, 0, 0, 0))
 }
 
 
@@ -33,20 +33,30 @@ body {
     box-shadow: 0 0 10px 2px #FB6D10;
 }
 
-figure {
-    display: flex;
-    justify-content: center;
+top {
+    display: inline-flex;
 }
 
+@media all and (min-width: 480px) and (max-width: 768px) {
+    top {
+        display: flex;
+        justify-content: center;
+    }
+
+    .art {
+        display: none;
+    }
+ }
+
+
 img {
-    width: 800px;
     max-width: 100%;
     height: 400px;
     border-radius: 10px;
 }
 
 #text {
-    font-size: 1.40rem; 
+    font-size: 1.40rem;
 }
 
 .btn-grid {
@@ -71,7 +81,7 @@ img {
 
 .btn:hover {
     filter: brightness(110%)
-} 
+}
 
 .btn:active {
     transform: translate(0, 0.3rem);

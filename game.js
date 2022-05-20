@@ -75,7 +75,7 @@ const textNodes = [
     },
     {
         id: 2,
-        img: 'Assets/Day1-Ring.jpg',
+        img: 'Assets/DE5004BL03W (1).jpg',
         text: 'The other side of the door opens up into a small room, no less damp than the cell you emerged from. A  large rat scurries by as you approach its center and you find yourself flanked by two routes: a dimly lit hallway to your right and a narrow, dark tunnel to your left. The entrance to the tunnel is littered with debris, suggesting it was blown in from the other side somehow and, therefore, must not be a natural path in the original design of this dungeon. You swear you hear faint, heavy breathing in the darkness ahead as well..  though it might be your dehydrated mind playing tricks on you. Peering into the dimly lit hallway on your right, you can at least see a light at the end of this path.',
         options: [
             {
