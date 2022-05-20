@@ -23,6 +23,9 @@ body {
 
 
 .container {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
     margin: 3vh;
     max-width: 80%;
     font-family: sans-serif;
