@@ -63,7 +63,7 @@ const textNodes = [
     {
         id: 1,
         img: 'Assets/Day1-Ring.jpg',
-        text: 'You are roused from a deep sleep by a drip of icy cold water splashing onto your face, soon discovering you are lying on the frigid floor of a damp cell. There is a dull ache in the back of your head as you recall being ambushed by an unknown assailant and, slowly, you get up. Are you still on the island of Statmos? Or are you some place else entirely? Determined to find out, you scan your surroundings for clues. The flickering light of a torch on the stone wall illuminates your path ahead, revealing an iron door mysteriously left open in front of you. You pry the torch from it’s rusty sconce on the wall, grateful for the light, and take a decisive step through the doorway as you courageously seek answers to your questions.',
+        text: 'You awaken lying flat on your back on the cold, damp floor of a dimly lit cavern. The echoes of splashing water can be heard several feet from you as droplets fall into scattered puddles across the room from great stalactites high above your head. Some fall on your face as you lie there staring up at the ceiling.  You feel funny however... Raising a pale hand in front of your face, you slowly start to realize your skin is, in fact, missing. "Dang.. I needed that." You say quietly to yourself.',
         options: [
             {
                 text: 'Continue',
@@ -74,7 +74,7 @@ const textNodes = [
     {
         id: 2,
         img: 'Assets/DE5004BL03W (1).jpg',
-        text: 'The other side of the door opens up into a small room, no less damp than the cell you emerged from. A  large rat scurries by as you approach its center and you find yourself flanked by two routes: a dimly lit hallway to your right and a narrow, dark tunnel to your left. The entrance to the tunnel is littered with debris, suggesting it was blown in from the other side somehow and, therefore, must not be a natural path in the original design of this dungeon. You swear you hear faint, heavy breathing in the darkness ahead as well..  though it might be your dehydrated mind playing tricks on you. Peering into the dimly lit hallway on your right, you can at least see a light at the end of this path.',
+        text: 'Test',
         options: [
             {
                 text: 'Dark Tunnel',
