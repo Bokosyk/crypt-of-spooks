@@ -63,7 +63,7 @@ const textNodes = [
     {
         id: 1,
         img: 'Assets/Day1-Ring.jpg',
-        text: 'The night is Halloween. Instead of trick or treating or the egging of unsuspecting neighbors houses, you find yourself lying flat on your back inside of a cave. Your vision is slightly blurred as you awaken, your mind dazed. The floor is cold and damp. The echoes of splashing water can be heard several feet from you as droplets fall into scattered puddles across the room from great stalactites hanging high above your head. Some fall on your face as you lie there staring up at the ceiling.  You feel funny however... Raising a hand in front of your face, you can scarcely make out the contour of your fingers. They appear different somehow... thinner.',
+        text: 'The night is Halloween. \n \n Instead of trick or treating or the egging of unsuspecting neighbors houses, you find yourself lying flat on your back inside of a cave. Your vision is slightly blurred as you awaken, your mind dazed. The floor is cold and damp. The echoes of splashing water can be heard several feet from you as droplets fall into scattered puddles across the room from great stalactites hanging high above your head. Some fall on your face as you lie there staring up at the ceiling, the light of the full moon shining down upon you through an opening in the rocks. You feel funny however... Raising a hand in front of your face, you can scarcely make out the contour of your fingers in your dazed state. They appear different somehow... thinner.',
         options: [
             {
                 text: 'Continue',
@@ -74,11 +74,11 @@ const textNodes = [
     {
         id: 2,
         img: 'Assets/DE5004BL03W (1).jpg',
-        text: 'You stand up. As your sight improves, you soon realize that what you thought was your emaciated and scrawny hand is, in fact, just your exposed bone. Additionally, you can\'t seem to make out a hint of there being ANY skin left on your hand. In lieu of this newfound discovery, you decide to comment on your current physical state:',
+        text: 'You stand up. As your sight improves, you soon realize that what you thought was your emaciated and scrawny hand is, in fact, just your exposed bone. Additionally, you can\'t seem to make out a hint of there being ANY flesh left on your hand. In lieu of this newfound discovery, you decide to comment on your current physical state:',
         options: [
             {
                 text: '"Heh... cool."',
-                nextText: 3
+                nextText: 4
             },
             {
                 text: '*Faints*',
@@ -86,18 +86,18 @@ const textNodes = [
             },
             {
                 text: '"I need to see a doctor."',
-                nextText: 3
+                nextText: 4
             },
             {
                 text: '"That\'s a serious case of carpal tunnel."',
-                nextText: 3
+                nextText: 4
             }
         ]
     },
     {
         id: 3,
         img: 'Assets/Day1-Ring.jpg',
-        text: 'You faint like a wimp. Your vision is slightly blurred as you awaken again after some time, your head dazed after your sudden fall. The floor is cold and damp. You feel a sense of deja vu as you lay there staring up at the cieling of the cave again.  You feel funny however... Raising a hand in front of your face, you can scarcely make out the contour of your fingers. They appear different somehow... thinner.',
+        text: 'You faint like a wimp. Your vision is slightly blurred as you awaken again after some time, your head dazed after your sudden fall. The floor is cold and damp. You feel a sense of deja vu as you lay there staring up at the cieling of the cave again.  You feel funny however... Raising a hand in front of your face, you can scarcely make out the contour of your fingers in your dazed state. They appear different somehow... thinner.',
         options: [
             {
                 text: 'Continue',
@@ -106,13 +106,35 @@ const textNodes = [
         ]
     },
     {
-        id: 15,
+        id: 4,
         img: 'Assets/Day1-Ring.jpg',
-        text: '**WORK IN PROGRESS** With no time to lose, you bolt towards the metal door up the path, the light of your torch guiding your steps and preventing you from falling headfirst into the cold, murky water. At this point, the basin begins to stir, the waters growing more chaotic and from the depths of the waters emerge a scaly, slithering sea serpent with its focus fixated on you and your torchlight. It hisses at you, preparing to strike and without bothering to look behind you, you swing open the door and slam it shut just in time, locking it. A loud thud shakes the door violently and an enraged serpent thrashes about at the other side of the door, angered at having let its meal escape. With a sigh of relief, you thank your lucky stars and continue on, never stopping for fear of being discovered again. Eventually, you reach the end of the tunnel and find a small lever in the stone. Pulling it, a slab of rock moves away from you, revealing a secret entrance to some sort of catacomb. Ahead is an arched door surrounded by burnt corpses and a room where weeping can be heard',
+        text: 'The fog in your mind clears the longer you are awake and as you become acutely aware of your senses- or rather, the lack of them. Apart from sight and sound, you notice your nostrils register no smell, your body no feeling of warmth or cold, hunger or discomfort. It would appear your skeletal hand has affected you more than you had thought... and without answers, you begin to fear something terrible has happened to you. Instinctively, you move towards a puddle on the ground. \n \n In your reflection, clear as day, you find a corpse staring back at you. The macabre grin of a skeleton illuminated by the moonlight.',
         options: [
             {
-                text: 'Start Over',
-                nextText: -1
+                text: 'Continue',
+                nextText: 5
+            }
+        ]
+    },
+    {
+        id: 5,
+        img: 'Assets/Day1-Ring.jpg',
+        text: '"This is no longer humerus."\n \n  With that, you walk away from the puddle and begin to look for an exit, convinced you must be in some strange, vivid dream. It is here your adventure begins.',
+        options: [
+            {
+                text: 'Continue',
+                nextText: 6
+            }
+        ]
+    },
+    {
+        id: 6,
+        img: 'Assets/Day1-Ring.jpg',
+        text: 'Text',
+        options: [
+            {
+                text: 'Continue',
+                nextText: 2
             }
         ]
     },
