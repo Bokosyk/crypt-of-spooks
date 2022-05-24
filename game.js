@@ -119,7 +119,7 @@ const textNodes = [
     {
         id: 5,
         img: 'Assets/Day1-Ring.jpg',
-        text: '"This is no longer humerus."\n \n  With that, you walk away from the puddle and begin to look for an exit, convinced you must be in some strange, vivid dream. It is here your adventure begins.',
+        text: '"This is no longer humerus."\n \n  With that, you walk away from the puddle and begin to look for an exit. It is here your adventure begins.',
         options: [
             {
                 text: 'Continue',
@@ -130,11 +130,72 @@ const textNodes = [
     {
         id: 6,
         img: 'Assets/Day1-Ring.jpg',
+        text: 'Ahead of you to your left lies a path extending further down into the cave. To your right is another tunnel, a small stream of water flows steadily in that direction. A small object lies in the center of this crossroads a few feet from you, unidentifiable from this distance.',
+        options: [
+            {
+                text: 'Veer Left',
+                nextText: 7
+            },
+            {
+                text: 'Veer Right',
+                nextText: 8
+            },
+            {
+                text: 'Examine object closely',
+                nextText: 9
+            },
+        ]
+    },
+    {
+        id: 7,
+        img: 'Assets/Day1-Ring.jpg',
         text: 'Text',
         options: [
             {
                 text: 'Continue',
                 nextText: 2
+            }
+        ]
+    },
+    {
+        id: 8,
+        img: 'Assets/Day1-Ring.jpg',
+        text: 'Text',
+        options: [
+            {
+                text: 'Continue',
+                nextText: 2
+            }
+        ]
+    },
+    {
+        id: 9,
+        img: 'Assets/Day1-Ring.jpg',
+        text: 'A shiny object catches your eye. It appears to be a coin of some sort, fashioned out of a strange metal in the likeness of a Jack O\' Lantern. With your fingers, you turn it to its side and discover an inscription etched onto the back: "All Hallows Eve, a time to be free". It does not seem to hold any obvious value to you.',
+        options: [
+            {
+                text: 'Take item',
+                setState: { coin: true },
+                nextText: 10
+            },
+            {
+                text: 'Discard',
+                nextText: 10
+            }
+        ]
+    },
+    {
+        id: 10,
+        img: 'Assets/Day1-Ring.jpg',
+        text: 'Ahead of you to your left lies a path extending further down into the cave. To your right is another tunnel, a small stream of water flows steadily in that direction.',
+        options: [
+            {
+                text: 'Veer Left',
+                nextText: 7
+            },
+            {
+                text: 'Veer Right',
+                nextText: 8
             }
         ]
     },
