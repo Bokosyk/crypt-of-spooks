@@ -63,10 +63,10 @@ const textNodes = [
     {
         id: 1,
         img: 'Assets/Day1-Ring.jpg',
-        text: 'The night is Halloween. \n \n Instead of trick or treating or the egging of unsuspecting neighbors houses, you find yourself lying flat on your back inside of a cave. Your vision is slightly blurred as you awaken, your mind dazed. The floor is cold and damp. The echoes of splashing water can be heard several feet from you as droplets fall into scattered puddles across the room from great stalactites hanging high above your head. Some fall on your face as you lie there staring up at the ceiling, the light of the full moon shining down upon you through an opening in the rocks. You feel funny however... Raising a hand in front of your face, you can scarcely make out the contour of your fingers in your dazed state. They appear different somehow... thinner.',
+        text: 'The night is Halloween. \n \n Instead of trick or treating or egging unsuspecting neighbors houses, you find yourself lying flat on your back inside of a cave. Your vision is slightly blurred as you awaken, your mind dazed. The floor is cold and damp. The echoes of splashing water can be heard several feet from you as droplets fall into scattered puddles across the room from great stalactites hanging high above your head. Some fall on your face as you lie there staring up at the ceiling, the light of the full moon shining down upon you through an opening in the rocks. You feel funny however... Raising a hand in front of your face, you can scarcely make out the contour of your fingers in your dazed state. They appear different somehow... thinner.',
         options: [
             {
-                text: 'Continue',
+                text: 'CONTINUE',
                 nextText: 2
             }
         ]
@@ -100,7 +100,7 @@ const textNodes = [
         text: 'You faint like a wimp. Your vision is slightly blurred as you awaken again after some time, your head dazed after your sudden fall. The floor is cold and damp. You feel a sense of deja vu as you lay there staring up at the cieling of the cave again.  You feel funny however... Raising a hand in front of your face, you can scarcely make out the contour of your fingers in your dazed state. They appear different somehow... thinner.',
         options: [
             {
-                text: 'Continue',
+                text: 'CONTINUE',
                 nextText: 2
             }
         ]
@@ -108,10 +108,10 @@ const textNodes = [
     {
         id: 4,
         img: 'Assets/Day1-Ring.jpg',
-        text: 'The fog in your mind clears the longer you are awake and as you become acutely aware of your senses- or rather, the lack of them. Apart from sight and sound, you notice your nostrils register no smell, your body no feeling of warmth or cold, hunger or discomfort. It would appear your skeletal hand has affected you more than you had thought... and without answers, you begin to fear something terrible has happened to you. Instinctively, you move towards a puddle on the ground. \n \n In your reflection, clear as day, you find a corpse staring back at you. The macabre grin of a skeleton illuminated by the moonlight.',
+        text: 'The fog in your mind clears the longer you are awake and as you become acutely aware of your senses- or rather, the lack of them. Apart from sight and sound, you notice your nostrils register no smell, your body no feeling of warmth or cold, hunger or discomfort. It would appear your skeletal hand has affected you more than you had thought... and without answers, you begin to fear something terrible has happened to you. Instinctively, you move towards a puddle on the ground. \n \n In your reflection, clear as day, you find a corpse staring back at you. The macabre grin of a skeleton, illuminated by the moonlight.',
         options: [
             {
-                text: 'Continue',
+                text: 'CONTINUE',
                 nextText: 5
             }
         ]
@@ -122,7 +122,7 @@ const textNodes = [
         text: '"This is no longer humerus."\n \n  With that, you walk away from the puddle and begin to look for an exit. It is here your adventure begins.',
         options: [
             {
-                text: 'Continue',
+                text: 'CONTINUE',
                 nextText: 6
             }
         ]
@@ -130,18 +130,18 @@ const textNodes = [
     {
         id: 6,
         img: 'Assets/Day1-Ring.jpg',
-        text: 'Ahead of you to your left lies a path extending further down into the cave. To your right is another tunnel, a small stream of water flows steadily in that direction. A small object lies in the center of this crossroads a few feet from you, unidentifiable from this distance.',
+        text: 'Ahead of you is a crossroads. To your left lies a path extending further down into the cave. To your right is a similar looking tunnel, save for a small stream of water that flows steadily in that direction. An unidentifiable object lies on the fork of the path a few feet from you.',
         options: [
             {
-                text: 'Veer Left',
+                text: 'TURN Left',
                 nextText: 7
             },
             {
-                text: 'Veer Right',
+                text: 'TURN Right',
                 nextText: 8
             },
             {
-                text: 'Examine object closely',
+                text: 'EXAMINE Object',
                 nextText: 9
             },
         ]
@@ -149,10 +149,14 @@ const textNodes = [
     {
         id: 7,
         img: 'Assets/Day1-Ring.jpg',
-        text: 'Text',
+        text: 'You traverse this path for some time, clumsily walking and fumbling in the darkness. After a while, a faint light floods the room and the roof of the cave rises. A small wooden shack comes into view, illuminated by a dozen lanterns spread evenly about the area. A cloaked figure sits outside, rocking on a chair with a book propped onto their lap. The lanterns do little to illuminate the strangers face, but you are sure they have noticed you.',
         options: [
             {
-                text: 'Continue',
+                text: 'APPROACH Stranger',
+                nextText: 11
+            },
+            {
+                text: 'CONTINUE Walking',
                 nextText: 2
             }
         ]
@@ -171,15 +175,15 @@ const textNodes = [
     {
         id: 9,
         img: 'Assets/Day1-Ring.jpg',
-        text: 'A shiny object catches your eye. It appears to be a coin of some sort, fashioned out of a strange metal in the likeness of a Jack O\' Lantern. With your fingers, you turn it to its side and discover an inscription etched onto the back: "All Hallows Eve, a time to be free". It does not seem to hold any obvious value to you.',
+        text: 'A shiny object catches your eye. It appears to be a coin of some sort, fashioned out of a strange metal in the likeness of a Jack O\' Lantern. With your fingers, you turn it to its side and discover an inscription etched onto the back: "All Hallows Eve, a time to be free". It does not seem to hold any immediate or obvious value to you.',
         options: [
             {
-                text: 'Take item',
+                text: 'TAKE Item',
                 setState: { coin: true },
                 nextText: 10
             },
             {
-                text: 'Discard',
+                text: 'DISCARD',
                 nextText: 10
             }
         ]
@@ -190,12 +194,204 @@ const textNodes = [
         text: 'Ahead of you to your left lies a path extending further down into the cave. To your right is another tunnel, a small stream of water flows steadily in that direction.',
         options: [
             {
-                text: 'Veer Left',
+                text: 'TURN Left',
                 nextText: 7
             },
             {
-                text: 'Veer Right',
+                text: 'TURN Right',
                 nextText: 8
+            }
+        ]
+    },
+    // ACHILLES SHACK
+    {
+        id: 11,
+        img: 'Assets/Day1-Ring.jpg',
+        text: '"Well, look at you.." Says the stranger, his voice raspy. He raises his head at your approach and shuts his book, gaping at your skeletal form. "I don\'t usually receive visitors... something about my appearance usually gets under peoples\' skin. But, ah.. you don\'t really have that problem now, do you?" \n \n  The stranger chuckles, lowering his hood. "Good.. some common ground, at least."',
+        options: [
+            {
+                text: '"Who are you?"',
+                nextText: 12
+            },
+            {
+                text: '"What happened to your face?"',
+                nextText: 13
+            },
+            {
+                text: '"Where am I?"',
+                nextText: 14
+            },
+            {
+                text: 'LEAVE',
+                nextText: 2
+            },
+        ]
+    },
+    {
+        id: 15,
+        img: 'Assets/Day1-Ring.jpg',
+        text: 'Achilles looks up at you expectantly.',
+        options: [
+            {
+                text: '"Who are you?"',
+                nextText: 12
+            },
+            {
+                text: '"What happened to your face?"',
+                nextText: 13
+            },
+            {
+                text: '"Where am I?"',
+                nextText: 14
+            },
+            {
+                text: 'LEAVE',
+                nextText: 2
+            },
+        ]
+    },
+    {
+        id: 12,
+        img: 'Assets/Day1-Ring.jpg',
+        text: '"I am Achilles. I live here."',
+        options: [
+            {
+                text: 'CONTINUE',
+                nextText: 15
+            },
+        ]
+    },
+    {
+        id: 13,
+        img: 'Assets/Day1-Ring.jpg',
+        text: '"The same thing that happened to you. I died."',
+        options: [
+            {
+                text: '"I\'m not dead."',
+                nextText: 17
+            },
+            {
+                text: '"How?"',
+                nextText: 22
+            },
+            {
+                text: '"That checks out. Anyways."',
+                nextText: 15
+            }
+        ]
+    },
+    {
+        id: 14,
+        img: 'Assets/Day1-Ring.jpg',
+        text: '"Hallows Crypt. An inbetween place between the land of the living and the dead. You came here at a good time actually."',
+        options: [
+            {
+                text: 'CONTINUE',
+                nextText: 21
+            },
+        ]
+    },
+    {
+        id: 17,
+        img: 'Assets/Day1-Ring.jpg',
+        text: '"Ah, so I\'m just ugly then, is that it?"',
+        options: [
+            {
+                text: '"That\'s not what I meant..."',
+                nextText: 18
+            },
+            {
+                text: '"You\'re beautiful!"',
+                nextText: 19
+            },
+            {
+                text: '"You said it."',
+                nextText: 20
+            }
+        ]
+    },
+    {
+        id: 18,
+        img: 'Assets/Day1-Ring.jpg',
+        text: '"Ha. Just kidding. I know what you meant. Sorry to burst your bubble, kid, but you\'re dead. Otherwise, you wouldn\'t be here. Which reminds me-"',
+        options: [
+            {
+                text: 'CONTINUE',
+                nextText: 14
+            }
+        ]
+    },
+    {
+        id: 19,
+        img: 'Assets/Day1-Ring.jpg',
+        text: '"Don\'t do that. Don\'t give me hope."',
+        options: [
+            {
+                text: 'CONTINUE',
+                nextText: 15
+            }
+        ]
+    },
+    {
+        id: 20,
+        img: 'Assets/Day1-Ring.jpg',
+        text: 'The skeleton seems to glare at you for a moment. "... I don\'t like you."',
+        options: [
+            {
+                text: 'CONTINUE',
+                nextText: 15
+            }
+        ]
+    },
+    {
+        id: 21,
+        img: 'Assets/Day1-Ring.jpg',
+        text: '"With it being Halloween night, the spirits are on the move. That means the portal to the realm of the living remains temporarily open. Goodie for you."',
+        options: [
+            {
+                text: 'Portal',
+                nextText: 23
+            },
+            {
+                text: 'Hallows Crypt',
+                nextText: 24
+            },
+            {
+                text: '"I had other questions.."',
+                nextText: 15
+            }
+        ]
+    },
+    {
+        id: 22,
+        img: 'Assets/Day1-Ring.jpg',
+        text: 'Achilles pauses for a moment to consider your question. "It\'s a long story. The short of it is I slipped on some ice while I was out wandering where I shouldn\'t and injured my heel pretty bad. ...Would\'ve been fine had that blizzard not shown up immediately after."',
+        options: [
+            {
+                text: 'CONTINUE',
+                nextText: 15
+            }
+        ]
+    },
+    {
+        id: 23,
+        img: 'Assets/Day1-Ring.jpg',
+        text: '"The portal here only activates once a year: every night on Halloween. It\'s usually for the spirits who dwell here, but every so often we get humans unlucky enough to die on Halloween. Usually they go to the other places.. but this night is sacred. To the point some souls such as yourself get caught as they\'re traversing the spiritual realms. In any case, you\'d better hurry if you\'re gonna make it out of here: You don\'t leave now while your soul is still fresh, you\'ll be a permanent resident.. Hallows is packed enough as it is."',
+        options: [
+            {
+                text: 'CONTINUE',
+                nextText: 21
+            }
+        ]
+    },
+    {
+        id: 24,
+        img: 'Assets/Day1-Ring.jpg',
+        text: '"Hallows Crypt is full of monsters. Some of them can\'t sing karoake to save their un-life, but come Halloween, they all sure love scaring the pants off of humans. Some of them don\'t take kindly to undead, lost-soul types like us however.. so cover up when you go out."',
+        options: [
+            {
+                text: 'CONTINUE',
+                nextText: 21
             }
         ]
     },
