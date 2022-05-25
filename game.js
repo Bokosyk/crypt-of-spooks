@@ -133,15 +133,15 @@ const textNodes = [
         text: 'Ahead of you is a crossroads. To your left lies a path extending further down into the cave. To your right is a similar looking tunnel, save for a small stream of water that flows steadily in that direction. An unidentifiable object lies on the fork of the path a few feet from you.',
         options: [
             {
-                text: 'TURN Left',
+                text: 'TURN LEFT',
                 nextText: 7
             },
             {
-                text: 'TURN Right',
+                text: 'TURN RIGHT',
                 nextText: 8
             },
             {
-                text: 'EXAMINE Object',
+                text: 'EXAMINE OBJECT',
                 nextText: 9
             },
         ]
@@ -152,11 +152,11 @@ const textNodes = [
         text: 'You traverse this path for some time, clumsily walking and fumbling in the darkness. After a while, a faint light floods the room and the roof of the cave rises. A small wooden shack comes into view, illuminated by a dozen lanterns spread evenly about the area. A cloaked figure sits outside, rocking on a chair with a book propped onto their lap. The lanterns do little to illuminate the strangers face, but you are sure they have noticed you.',
         options: [
             {
-                text: 'APPROACH Stranger',
+                text: 'APPROACH STRANGER',
                 nextText: 11
             },
             {
-                text: 'CONTINUE Walking',
+                text: 'CONTINUE',
                 nextText: 2
             }
         ]
@@ -164,7 +164,7 @@ const textNodes = [
     {
         id: 8,
         img: 'Assets/Day1-Ring.jpg',
-        text: 'Text',
+        text: '*WIP*',
         options: [
             {
                 text: 'Continue',
@@ -178,7 +178,7 @@ const textNodes = [
         text: 'A shiny object catches your eye. It appears to be a coin of some sort, fashioned out of a strange metal in the likeness of a Jack O\' Lantern. With your fingers, you turn it to its side and discover an inscription etched onto the back: "All Hallows Eve, a time to be free". It does not seem to hold any immediate or obvious value to you.',
         options: [
             {
-                text: 'TAKE Item',
+                text: 'TAKE ITEM',
                 setState: { coin: true },
                 nextText: 10
             },
@@ -194,11 +194,11 @@ const textNodes = [
         text: 'Ahead of you to your left lies a path extending further down into the cave. To your right is another tunnel, a small stream of water flows steadily in that direction.',
         options: [
             {
-                text: 'TURN Left',
+                text: 'TURN LEFT',
                 nextText: 7
             },
             {
-                text: 'TURN Right',
+                text: 'TURN RIGHT',
                 nextText: 8
             }
         ]
@@ -223,7 +223,7 @@ const textNodes = [
             },
             {
                 text: 'LEAVE',
-                nextText: 2
+                nextText: 25
             },
         ]
     },
@@ -246,7 +246,7 @@ const textNodes = [
             },
             {
                 text: 'LEAVE',
-                nextText: 2
+                nextText: 25
             },
         ]
     },
@@ -393,6 +393,35 @@ const textNodes = [
                 text: 'CONTINUE',
                 nextText: 21
             }
+        ]
+    },
+    {
+        id: 25,
+        img: 'Assets/Day1-Ring.jpg',
+        text: 'Achilles nods, gesturing towards a cloak hanging over a railing on his front porch. "Before you leave, take that cloak with you. There\'s a mask inside the left pocket. Cover yourself as best as you can. You\'ll have an easier time getting around that way. Or don\'t, see if I care." With that, Achilles pries open his book once more and pays you no more attention.',
+        options: [
+            {
+                text: 'TAKE DISGUISE',
+                setState: { disguise: true },
+                nextText: 26
+            },
+            {
+                text: 'IGNORE',
+                nextText: 26
+            }
+
+        ]
+    },
+    {
+        id: 26,
+        img: 'Assets/Day1-Ring.jpg',
+        text: '*WIP*',
+        options: [
+            {
+                text: 'CONTINUE',
+                nextText: 21
+            }
+
         ]
     },
     {
