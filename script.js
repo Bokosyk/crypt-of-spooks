@@ -387,7 +387,7 @@ const textNodes = [
     {
         id: 24,
         img: 'Assets/Day1-Ring.jpg',
-        text: '"Hallows Crypt is full of monsters. Some of them can\'t sing karoake to save their un-life, but come Halloween, they all sure love scaring the pants off of humans. Some of them don\'t take kindly to undead, lost-soul types like us however.. so cover up when you go out."',
+        text: '"Hallows Crypt is full of monsters. Some of them can\'t sing karoake to save their un-life, but come Halloween, they all sure love scaring the pants off of humans. Oh... and the bone puns.. yeah, that never gets old. Some of them don\'t take kindly to undead, lost-soul types like us however.. so cover up when you go out."',
         options: [
             {
                 text: 'CONTINUE',
@@ -398,11 +398,11 @@ const textNodes = [
     {
         id: 25,
         img: 'Assets/Day1-Ring.jpg',
-        text: 'Achilles nods, gesturing towards a cloak hanging over a railing on his front porch. "Before you leave, take that cloak with you. There\'s a mask inside the left pocket. Cover yourself as best as you can. You\'ll have an easier time getting around that way. Or don\'t, see if I care." With that, Achilles pries open his book once more and pays you no more attention.',
+        text: 'Achilles nods, gesturing towards a cloak hanging over a railing on his front porch. "Before you leave, take that costume with you. Cover yourself as best as you can. You\'ll have an easier time getting around that way. Or don\'t, see if I care." With that, Achilles pries open his book once more and pays you no more attention.',
         options: [
             {
-                text: 'TAKE DISGUISE',
-                setState: { disguise: true },
+                text: 'TAKE GHOST COSTUME',
+                setState: { costume: true },
                 nextText: 26
             },
             {
