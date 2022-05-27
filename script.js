@@ -1,9 +1,23 @@
+// Dependencies
+const intro = document.getElementById('intro')
+const startButton = document.getElementById('start-btn')
+const container = document.getElementById('mainCont')
 const textElement = document.getElementById('text')
 const optionButtonsElement = document.getElementById('option-buttons')
 const textImage = document.getElementById('image')
 let state = {}
 
+startButton.addEventListener('click', startGame)
+
 function startGame() {
+
+    // Hides Intro Page
+    intro.setAttribute('hidden',true)
+    startButton.setAttribute('hidden',true)
+    container.removeAttribute("hidden")
+    container.classList.add('display:flex')
+    
+
     state = {}
     showTextNode(1)
 }
@@ -475,5 +489,3 @@ const textNodes = [
         ]
     }
 ]
-
-startGame()

@@ -24,7 +24,6 @@ body {
 }
 
 .container {
-    display: flex;
     text-align: center;
     flex-direction: column;
     margin: 3vh;
