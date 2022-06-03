@@ -163,7 +163,7 @@ const textNodes = [
     {
         id: 7,
         img: 'Assets/Day1-Ring.jpg',
-        text: 'You traverse this path for some time, clumsily walking and fumbling in the darkness. After a while, a faint light floods the room and the roof of the cave rises. A small wooden shack comes into view, illuminated by a dozen lanterns spread evenly about the area. A cloaked figure sits outside, rocking on a chair with a book propped onto their lap. The lanterns do little to illuminate the strangers face, but you are sure they have noticed you.',
+        text: 'You traverse this path for some time, clumsily walking and stumbling in the darkness. After a while, a faint light floods the room and the roof of the cave rises. A small wooden shack comes into view, illuminated by a dozen lanterns spread evenly about the area. A cloaked figure sits outside, rocking on a chair with a book propped onto their lap. The lanterns do little to illuminate the strangers face, but you are sure they have noticed you.',
         options: [
             {
                 text: 'APPROACH STRANGER',
@@ -178,7 +178,7 @@ const textNodes = [
     {
         id: 8,
         img: 'Assets/Day1-Ring.jpg',
-        text: '*WIP*',
+        text: 'You stumble in the dark, following the sound of flowing water as you travel downstream. The roof of the cave rises as you progress and, eventually, the darkness fades as moonlight shines through rocky openings in the ceiling once more. Unsurprisingly, you discover the stream you had been following feeds into an underground lake. By the waters edge is a wooden sign pointing in two directions: along the shore line and one back the way you came.',
         options: [
             {
                 text: 'Continue',
