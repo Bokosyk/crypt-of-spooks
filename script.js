@@ -1,5 +1,5 @@
 // Dependencies
-const intro = document.getElementById('intro')
+const intro = document.getElementById('controls')
 const startButton = document.getElementById('start-btn')
 const container = document.getElementById('mainCont')
 const textElement = document.getElementById('text')
@@ -7,16 +7,21 @@ const optionButtonsElement = document.getElementById('option-buttons')
 const textImage = document.getElementById('image')
 let state = {}
 
+
 startButton.addEventListener('click', startGame)
 
 function startGame() {
+    
 
     // Hides Intro Page
-    intro.setAttribute('hidden',true)
-    startButton.setAttribute('hidden',true)
+    function hide(parent) {
+        parent.setAttribute('hidden', true)
+    }
+
+    hide(intro)
     container.removeAttribute("hidden")
     container.classList.add('display:flex')
-    
+
 
     state = {}
     showTextNode(1)

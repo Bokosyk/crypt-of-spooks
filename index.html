@@ -6,8 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crypt Of Spooks</title>
-    <!-- Stylesheet -->
-    <link rel="stylesheet" href="style.css">
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/Assets/css/main.css">
+    <link rel="stylesheet" href="/Assets/css/menu.css">
 
     <link href="https://fonts.googleapis.com/css2?family=Henny+Penny&family=Rye&display=swap" rel="stylesheet">
     <script defer src="/script.js"></script>
@@ -15,9 +16,9 @@
 
 <body>
     <nav><button id="navbar">CRYPT OF SPOOKS</button></nav>
-   
+
     <!-- MAIN CONTAINER -->
-    <main id="mainCont"class="container" hidden>
+    <main id="mainCont" class="container" hidden>
         <figure id="image"><img src="Assets/Day1-Ring.jpg" alt="Scene"></figure>
         <figcaption id="text">Text</figcaption>
         <nav id="option-buttons" class="btn-grid">
@@ -29,10 +30,16 @@
     </main>
 
     <!-- INTRO WIP -->
-    <div class="controls">
+    <menu align="center" id="controls">
         <p id="intro">Welcome to the Crypt Of Spooks</p>
-        <button id="start-btn" class="start-btn btn">Start</button>
-    </div>
+        <div class="menu">
+            <button id="start-btn" class="start-btn btn">Start</button>
+            <button class="btn">Settings</button>
+            <button class="btn">About</button>
+            <button class="btn">Extras</button>
+            
+        </div>
+    </menu>
 </body>
 
 </html>

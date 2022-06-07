@@ -1,0 +1,13 @@
+#intro {
+    border: none;
+    background-color: transparent;
+    outline: none;
+    width: 100%;
+    padding: 10px 0px;
+    text-align: center;
+    margin: auto;
+    font-family: 'Henny Penny', cursive;
+    font-size: 50px;
+    text-shadow: 2px 2px 5px whitesmoke;
+    background-image: linear-gradient(#333, rgba(255, 0, 0, 0))
+}
