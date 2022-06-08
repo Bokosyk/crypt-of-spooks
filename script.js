@@ -7,19 +7,19 @@ const optionButtonsElement = document.getElementById('option-buttons')
 const textImage = document.getElementById('image')
 let state = {}
 
+function hide(parent) {
+    parent.setAttribute('hidden', true)
+}
+
+function show(parent) {
+    parent.removeAttribute('hidden')
+}
 
 startButton.addEventListener('click', startGame)
 
 function startGame() {
-    
-
-    // Hides Intro Page
-    function hide(parent) {
-        parent.setAttribute('hidden', true)
-    }
-
     hide(intro)
-    container.removeAttribute("hidden")
+    show(container)
     container.classList.add('display:flex')
 
 
