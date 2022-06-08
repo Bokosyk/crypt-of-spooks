@@ -1,10 +1,12 @@
 // Dependencies
 const intro = document.getElementById('controls')
+const toggleMusic = document.getElementById('music')
 const startButton = document.getElementById('start-btn')
 const container = document.getElementById('mainCont')
 const textElement = document.getElementById('text')
 const optionButtonsElement = document.getElementById('option-buttons')
 const textImage = document.getElementById('image')
+
 let state = {}
 
 function hide(parent) {
@@ -15,13 +17,22 @@ function show(parent) {
     parent.removeAttribute('hidden')
 }
 
+toggleMusic.addEventListener('click', playMusic)
 startButton.addEventListener('click', startGame)
+
+function playMusic(){
+    var audio = new Audio('Assets/audio/Halloween Party 2014 - Phantasmagorie - HQ.mp3')
+    audio.play()
+
+    //To-do:  Make audio reliant on textNodes
+    // Add volume/toggle settings
+}
 
 function startGame() {
     hide(intro)
     show(container)
     container.classList.add('display:flex')
-    
+
     state = {}
     showTextNode(1)
 }
@@ -77,6 +88,7 @@ function selectOption(option) {
     showTextNode(nextTextNodeId)
 }
 
+// SCENES
 const textNodes = [
     {
         id: 1,
