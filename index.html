@@ -6,28 +6,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crypt Of Spooks</title>
+
+    <!-- Google Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
     <!-- Stylesheets -->
     <link rel="stylesheet" href="/Assets/css/main.css">
     <link rel="stylesheet" href="/Assets/css/menu.css">
-
     <link href="https://fonts.googleapis.com/css2?family=Henny+Penny&family=Rye&display=swap" rel="stylesheet">
+    <!-- JS -->
     <script defer src="/script.js"></script>
 </head>
 
 <body>
     <!-- NAVIGATION BAR -->
-    <nav><button id="navbar">CRYPT OF SPOOKS</button></nav>
+    <nav id="navbar">
+        <button><i class="material-icons md-48">volume_up</i></button>
+        <button><i class="material-icons md-48">volume_off</i></button>
+    </nav>
 
     <!-- MAIN MENU -->
     <menu align="center" id="controls">
         <p id="intro">Welcome to the Crypt Of Spooks</p>
-        <div class="menu">
-            <button id="start-btn" class="start-btn btn">Start</button>
-            <button class="btn">Settings</button>
-            <button class="btn">About</button>
-            <button class="btn">Extras</button>
+        <nav class="menu">
+            <button id="start-btn" class="menuBtn">Start</button>
+            <button class="menuBtn">Load</button>
+            <button class="menuBtn">Settings</button>
+            <button class="menuBtn">Extras</button>
             
-        </div>
+        </nav>
     </menu>
 
     <!-- MAIN CONTAINER -->

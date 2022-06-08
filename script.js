@@ -21,8 +21,7 @@ function startGame() {
     hide(intro)
     show(container)
     container.classList.add('display:flex')
-
-
+    
     state = {}
     showTextNode(1)
 }

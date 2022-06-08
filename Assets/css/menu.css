@@ -1,3 +1,20 @@
+#navbar {
+    background-color: #4D3347;
+    width: 100%;
+    height: 50px;
+    padding: 0px 0px;
+    margin: auto;
+    font-family: 'Henny Penny', cursive;
+    text-shadow: 2px 2px 5px whitesmoke;
+}
+
+#navbar.button {
+    background-color: none;
+}
+
+/* ICONS NAV */
+.material-icons.md-48 { font-size: 48px; }
+
 #intro {
     border: none;
     background-color: transparent;
@@ -9,5 +26,32 @@
     font-family: 'Henny Penny', cursive;
     font-size: 50px;
     text-shadow: 2px 2px 5px whitesmoke;
-    background-image: linear-gradient(#333, rgba(255, 0, 0, 0))
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+}
+
+.menuBtn {
+    cursor: pointer;
+    font-size: 1.2rem;
+    height: 2.5rem;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    background-color: #4D3347;
+    outline: none;
+    margin-top: 15px;
+    padding: 0.5rem 1.8rem;
+    box-shadow: 0 0.3rem rgba(251, 109, 16, 0.65);
+}
+
+.menuBtn:hover {
+    filter: brightness(110%)
+}
+
+.menuBtn:active {
+    transform: translate(0, 0.3rem);
+    box-shadow: 0 0.1rem rgba(251, 109, 16, 0.65);
 }
