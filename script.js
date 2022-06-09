@@ -22,9 +22,17 @@ startButton.addEventListener('click', startGame)
 
 function playMusic(){
     var audio = new Audio('Assets/audio/Halloween Party 2014 - Phantasmagorie - HQ.mp3')
-    audio.play()
+
+    if (toggleMusic.innerHTML == `<i class="material-icons md-48">volume_up</i>`) {
+        toggleMusic.innerHTML = `<i class="material-icons md-48">volume_off</i>`
+        audio.pause()
+    }
+    else if (toggleMusic.innerHTML == `<i class="material-icons md-48">volume_off</i>`) {
+        toggleMusic.innerHTML = `<i class="material-icons md-48">volume_up</i>`
+        audio.play()
+    }
     //To-do:  Make audio reliant on textNodes
-    // Add volume/toggle settings
+    //To-do: Get pause() to work properly
 }
 
 function startGame() {
