@@ -23,7 +23,6 @@ startButton.addEventListener('click', startGame)
 function playMusic(){
     var audio = new Audio('Assets/audio/Halloween Party 2014 - Phantasmagorie - HQ.mp3')
     audio.play()
-
     //To-do:  Make audio reliant on textNodes
     // Add volume/toggle settings
 }
@@ -92,7 +91,7 @@ function selectOption(option) {
 const textNodes = [
     {
         id: 1,
-        img: 'Assets/Day1-Ring.jpg',
+        img: 'Assets/images/Day1-Ring.jpg',
         text: 'The night is Halloween. \n \n Instead of trick or treating or egging unsuspecting neighbors houses, you find yourself lying flat on your back inside of a cave. Your vision is slightly blurred as you awaken, your mind dazed. The floor is cold and damp. The echoes of splashing water can be heard several feet from you as droplets fall into scattered puddles across the room from great stalactites hanging high above your head. Some fall on your face as you lie there staring up at the ceiling, the light of the full moon shining down upon you through an opening in the rocks. You feel funny however... Raising a hand in front of your face, you can scarcely make out the contour of your fingers in your dazed state. They appear different somehow... thinner.',
         options: [
             {
