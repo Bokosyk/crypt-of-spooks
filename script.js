@@ -1,5 +1,6 @@
 // Dependencies
 const intro = document.getElementById('controls')
+const track = document.getElementById('track')
 const toggleMusic = document.getElementById('music')
 const startButton = document.getElementById('start-btn')
 const container = document.getElementById('mainCont')
@@ -20,20 +21,32 @@ function show(parent) {
 toggleMusic.addEventListener('click', playMusic)
 startButton.addEventListener('click', startGame)
 
-function playMusic(){
-    var audio = new Audio('Assets/audio/Halloween Party 2014 - Phantasmagorie - HQ.mp3')
+function playMusic() {
+
+    var data = {
+        audios: [
+            {
+                id: 'phantasmagorie',
+                name: "Phantasmagorie",
+                file: track.src = 'Assets/audio/Halloween Party 2014 - Phantasmagorie - HQ.mp3',
+                isPlaying: false
+            }
+        ]
+    }
 
     if (toggleMusic.innerHTML == `<i class="material-icons md-48">volume_up</i>`) {
+        track.pause()
         toggleMusic.innerHTML = `<i class="material-icons md-48">volume_off</i>`
-        audio.pause()
     }
     else if (toggleMusic.innerHTML == `<i class="material-icons md-48">volume_off</i>`) {
+        track.play()
         toggleMusic.innerHTML = `<i class="material-icons md-48">volume_up</i>`
-        audio.play()
+
     }
     //To-do:  Make audio reliant on textNodes
-    //To-do: Get pause() to work properly
+    //To-do: Continue song in silence even if paused
 }
+
 
 function startGame() {
     hide(intro)
