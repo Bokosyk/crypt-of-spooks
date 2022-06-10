@@ -21,9 +21,10 @@ function show(parent) {
 toggleMusic.addEventListener('click', playMusic)
 startButton.addEventListener('click', startGame)
 
+
 function playMusic() {
 
-    var data = {
+    var playList = {
         audios: [
             {
                 id: 'phantasmagorie',
@@ -51,6 +52,7 @@ function playMusic() {
 function startGame() {
     hide(intro)
     show(container)
+    playMusic()
     container.classList.add('display:flex')
 
     state = {}
