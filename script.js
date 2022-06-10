@@ -52,6 +52,7 @@ function playMusic() {
     }
     else if (toggleMusic.innerHTML == `<i class="material-icons md-48">volume_off</i>`) {
         track.play()
+        track.loop = true
         toggleMusic.innerHTML = `<i class="material-icons md-48">volume_up</i>`
 
     }
