@@ -21,30 +21,27 @@ function show(parent) {
 toggleMusic.addEventListener('click', playMusic)
 startButton.addEventListener('click', startGame)
 
-const playList = {
-    audios: [
-        {
-            id: 'phantasmagorie',
-            name: 'Phantasmagorie',
-            file: 'Assets/audio/Halloween Party 2014 - Phantasmagorie - HQ.mp3',
-            isPlaying: false
-        },
-        {
-            id: 'halloween',
-            name: 'Halloween',
-            file: 'Assets/audio/Halloween.mp3',
-            isPlaying: false
-        }
-    ]
-}
-
-
 function playMusic() {
-   
+
+    const playList = {
+        audios: [
+            {
+                id: 'phantasmagorie',
+                name: 'Phantasmagorie',
+                file: 'Assets/audio/Halloween Party 2014 - Phantasmagorie - HQ.mp3',
+                isPlaying: false
+            },
+            {
+                id: 'halloween',
+                name: 'Halloween',
+                file: 'Assets/audio/Halloween.mp3',
+                isPlaying: false
+            }
+        ]
+    }
 
     //Make audio reliant on textNodes WIP
     track.src = playList.audios[1].file
-    console.log(track)
 
     if (toggleMusic.innerHTML == `<i class="material-icons md-48">volume_up</i>`) {
         track.pause()
