@@ -23,6 +23,7 @@ body {
     padding: 0;
     margin: 0;
     display: flex;
+    color: var(--background);
     align-items: center;
     width: 100vw;
     flex-direction: column;

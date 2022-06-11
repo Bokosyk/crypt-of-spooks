@@ -3,6 +3,8 @@ const intro = document.getElementById('controls')
 const track = document.getElementById('track')
 const toggleMusic = document.getElementById('music')
 const toggleSwitch =document.querySelector('input[type="checkbox"]')
+const nav = document.getElementById('navbar')
+const toggleIcon = document.getElementById('toggle-icon')
 const startButton = document.getElementById('start-btn')
 const container = document.getElementById('mainCont')
 const textElement = document.getElementById('text')
@@ -24,12 +26,28 @@ toggleSwitch.addEventListener('change', switchTheme)
 toggleMusic.addEventListener('click', playMusic)
 startButton.addEventListener('click', startGame)
 
+// Dark Mode Styles
+function darkMode() {
+    nav.style.backgroundColor = 'rgb( 0 0 / 50%)';
+    toggleIcon.children[0].textContent = 'Dark Mode';
+    toggleIcon.children[1].innerText = 'dark_mode'
+}
+
+// Light Mode Styles
+function lightMode() {
+    nav.style.backgroundColor = 'rgb(255 255 255 / 50%)';
+    toggleIcon.children[0].textContent = 'Light Mode';
+    toggleIcon.children[1].innerText = 'light_mode'
+}
+
 // Switch Theme Dynamically
 function switchTheme(event) {
     if (event.target.checked) {
         document.documentElement.setAttribute('data-theme', 'dark')
+        darkMode();
     } else {
         document.documentElement.setAttribute('data-theme', 'light')
+        lightMode();
     }
 }
 
