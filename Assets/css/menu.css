@@ -1,7 +1,29 @@
+:root {
+    --primary-color: rgb(255, 92, 92);
+    --primary-variant: #ff2d2d;
+    --secondary-color: #1b9999;
+    --on-primary: rgb(250, 250, 250);
+    --on-background: rgb(66, 66, 66);
+    --on-background-alt: rgba(66, 66, 66, 0.7);
+    --background: rgb(255, 255, 255);
+    --box-shadow: 0 5px 20px 1px rgba(0, 0, 0, 0.5);
+  }
+  
+  [data-theme="dark"] {
+    --primary-color: rgb(150, 65, 255);
+    --primary-variant: #6c63ff;
+    --secondary-color: #03dac5;
+    --on-primary: #000;
+    --on-background: rgba(255, 255, 255, 0.9);
+    --on-background-alt: rgba(255, 255, 255, 0.7);
+    --background: #121212;
+  }
+
 #navbar {
+    z-index: 10;
+    position: fixed;
     background-color: #4D3347;
-    width: 100%;
-    height: 50x;
+    width: 100vw;
     padding: 0px 0px;
     margin: auto;
     font-family: 'Henny Penny', cursive;
@@ -13,15 +35,23 @@
     
 }
 
-#music {
+#music,
+#mode {
     background-color: #2E2E41;
-    color: rgba(251, 109, 16, 0.65);
+    color: var(--primary-color);
     border: solid;
     border-radius: 60px;
 }
 
+#music:hover,
+#mode:hover {
+    color: var(--on-background)
+}
+
 /* ICONS NAV */
-.material-icons.md-48 { font-size: 48px; }
+.material-icons.md-48 {
+     font-size: 48px; 
+    }
 
 #intro {
     border: none;
@@ -30,7 +60,7 @@
     width: 100%;
     padding: 10px 0px;
     text-align: center;
-    margin: auto;
+    margin-top: 50px;
     font-family: 'Henny Penny', cursive;
     font-size: 50px;
     text-shadow: 2px 2px 5px whitesmoke;

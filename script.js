@@ -10,12 +10,12 @@ const textImage = document.getElementById('image')
 
 let state = {}
 
-function hide(parent) {
-    parent.setAttribute('hidden', true)
+function hide(item) {
+    item.setAttribute('hidden', true)
 }
 
-function show(parent) {
-    parent.removeAttribute('hidden')
+function show(item) {
+    item.removeAttribute('hidden')
 }
 
 toggleMusic.addEventListener('click', playMusic)
