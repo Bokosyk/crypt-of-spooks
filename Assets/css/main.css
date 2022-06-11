@@ -41,7 +41,7 @@ body {
     color: var(--on-primary);
     padding: 20px 30px;
     border-radius: 5px;
-    box-shadow: 0 0 10px 2px #FB6D10;
+    box-shadow: 0 0 10px 2px var(--primary-color);
 }
 
 
