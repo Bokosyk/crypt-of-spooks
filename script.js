@@ -2,6 +2,7 @@
 const intro = document.getElementById('controls')
 const track = document.getElementById('track')
 const toggleMusic = document.getElementById('music')
+const toggleSwitch =document.querySelector('input[type="checkbox"]')
 const startButton = document.getElementById('start-btn')
 const container = document.getElementById('mainCont')
 const textElement = document.getElementById('text')
@@ -18,8 +19,15 @@ function show(item) {
     item.removeAttribute('hidden')
 }
 
+// Event Listeners
+toggleSwitch.addEventListener('change', switchTheme)
 toggleMusic.addEventListener('click', playMusic)
 startButton.addEventListener('click', startGame)
+
+// Switch Theme Dynamically
+function switchTheme(event) {
+    console.log(event)
+}
 
 function playMusic() {
 
