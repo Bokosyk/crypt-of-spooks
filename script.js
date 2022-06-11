@@ -29,6 +29,7 @@ startButton.addEventListener('click', startGame)
 // Dark Mode Styles
 function darkMode() {
     nav.style.backgroundColor = 'rgb( 0 0 / 50%)';
+    container.style.backgroundColor = 'rgb(255 255 255 / 50%)'
     toggleIcon.children[0].textContent = 'Dark Mode';
     toggleIcon.children[1].innerText = 'dark_mode'
 }
@@ -36,6 +37,7 @@ function darkMode() {
 // Light Mode Styles
 function lightMode() {
     nav.style.backgroundColor = 'rgb(255 255 255 / 50%)';
+    container.style.backgroundColor = 'rgb(0 0 0 / 50%)'
     toggleIcon.children[0].textContent = 'Light Mode';
     toggleIcon.children[1].innerText = 'light_mode'
 }
