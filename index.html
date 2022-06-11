@@ -22,7 +22,18 @@
     <nav id="navbar">
         <audio src="" id="track"></audio>
         <button id="music"><i class="material-icons md-48">volume_off</i></button>
-        <button id="mode"><i class="material-icons md-48">light_mode</i></button>
+        <div class="theme-switch-wrapper">
+            <span id="toggle-icon">
+                <span class="toggle-text">Light Mode</span>
+                    <i class="material-icons md-48">light_mode</i>
+            </span>
+            <label class="theme-switch">
+                <input type="checkbox">
+                <div class="slider round"></div>
+            </label>
+        </div>
+
+
         <button><i class="material-icons md-48">dark_mode</i></button>
     </nav>
 
