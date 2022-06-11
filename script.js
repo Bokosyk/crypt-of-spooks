@@ -22,6 +22,7 @@ if (currentTheme) {
     }
 }
 
+// For items
 let state = {}
 
 function hide(item) {
