@@ -126,16 +126,14 @@ input:checked+.slider::before {
 }
 
 #intro {
-    border: none;
-    background-color: transparent;
-    outline: none;
-    width: 100%;
+    color: var(--on-background);
+    letter-spacing: 3px;
     padding: 10px 0px;
     text-align: center;
-    margin-top: 50px;
+    margin-top: 130px;
     font-family: 'Henny Penny', cursive;
     font-size: 50px;
-    /* text-shadow: 2px 2px 5px whitesmoke; */
+    text-shadow: 2px 2px 5px var(--primary-variant);
 }
 
 .menu {
