@@ -23,6 +23,7 @@ if (currentTheme) {
 }
 
 // For items
+const inventory = document.getElementById('inventory')
 let state = {}
 
 function hide(item) {
@@ -105,6 +106,7 @@ function playMusic() {
 function startGame() {
     hide(intro)
     show(container)
+    show(inventory)
     playMusic()
     container.classList.add('display:flex')
     state = {}
@@ -168,8 +170,7 @@ const textNodes = [
         id: 1,
         img: 'Assets/images/Day1-Ring.jpg',
         name: "gamestart",
-        sound: "",
-        text: 'The night is Halloween. \n \n Instead of trick or treating or egging unsuspecting neighbors houses, you find yourself lying flat on your back inside of a cave. Your vision is slightly blurred as you awaken, your mind dazed. The floor is cold and damp. The echoes of splashing water can be heard several feet from you as droplets fall into scattered puddles across the room from great stalactites hanging high above your head. Some fall on your face as you lie there staring up at the ceiling, the light of the full moon shining down upon you through an opening in the rocks. You feel funny however... Raising a hand in front of your face, you can scarcely make out the contour of your fingers in your dazed state. They appear different somehow... thinner.',
+        text: 'The night is Halloween. \n \n You find yourself lying flat on your back inside of a cave. Your vision is slightly blurred as you awaken, your mind dazed. The floor is cold and damp. The echoes of splashing water can be heard several feet from you as droplets fall into scattered puddles across the room from great stalactites hanging high above your head. Some fall on your face as you lie there staring up at the ceiling, the light of the full moon shining down upon you through an opening in the rocks. You feel funny however... Raising a hand in front of your face, you can scarcely make out the contour of your fingers in your dazed state. They appear different somehow... thinner.',
         options: [
             {
                 text: 'CONTINUE',
@@ -205,7 +206,7 @@ const textNodes = [
         id: 3,
         img: 'Assets/Day1-Ring.jpg',
         name: "gamestart",
-        text: 'You faint like a wimp. Your vision is slightly blurred as you awaken again after some time, your head dazed after your sudden fall. The floor is cold and damp. You feel a sense of deja vu as you lay there staring up at the cieling of the cave again.  You feel funny however... Raising a hand in front of your face, you can scarcely make out the contour of your fingers in your dazed state. They appear different somehow... thinner.',
+        text: 'You faint like a wimp. You wake up again after some time. You feel funny however... Raising a hand in front of your face, you can scarcely make out the contour of your fingers in your dazed state. They appear different somehow... thinner.',
         options: [
             {
                 text: 'CONTINUE',
@@ -217,7 +218,7 @@ const textNodes = [
         id: 4,
         img: 'Assets/Day1-Ring.jpg',
         name: "gamestart",
-        text: 'The fog in your mind clears the longer you are awake and as you become acutely aware of your senses- or rather, the lack of them. Apart from sight and sound, you notice your nostrils register no smell, your body no feeling of warmth or cold, hunger or discomfort. It would appear your skeletal hand has affected you more than you had thought... and without answers, you begin to fear something terrible has happened to you. Instinctively, you move towards a puddle on the ground. \n \n In your reflection, clear as day, you find a corpse staring back at you. The macabre grin of a skeleton, illuminated by the moonlight.',
+        text: 'The fog in your mind clears over time and you become acutely aware of your senses- or rather, the lack of them. Apart from sight and sound, you notice your nostrils register no smell, your body no feeling of warmth or cold, hunger or discomfort. Something is not quite right... and without answers, you begin to imagine all sorts of ghastly scenarios. Instinctively, you move towards a puddle on the ground. \n \n In your reflection, clear as day, you meet the haunting gaze of a corpse. The macabre grin of a skeleton, illuminated by the moonlight, stares back at you.',
         options: [
             {
                 text: 'CONTINUE',
@@ -229,7 +230,7 @@ const textNodes = [
         id: 5,
         img: 'Assets/Day1-Ring.jpg',
         name: "gamestart",
-        text: '"This is no longer humerus."\n \n  With that, you walk away from the puddle and begin to look for an exit. It is here your adventure begins.',
+        text: '"This is no longer humerus."\n \n You state bluntly. Clearly, this must be some sort of parlor trick to get a rise out of you.. With that, you step away from the puddle and begin to look for an exit. It is here your adventure begins.',
         options: [
             {
                 text: 'CONTINUE',
@@ -276,17 +277,22 @@ const textNodes = [
     {
         id: 8,
         img: 'Assets/Day1-Ring.jpg',
-        text: 'You stumble in the dark, following the sound of flowing water as you travel downstream. The roof of the cave rises as you progress and, eventually, the darkness fades as moonlight shines through rocky openings in the ceiling once more. Unsurprisingly, you discover the stream you had been following feeds into an underground lake. By the waters edge is a wooden sign pointing in two directions: along the shore line and one back the way you came.',
+        text: 'You stumble in the dark, following the sound of flowing water as you travel downstream. The roof of the cave rises as you progress and, eventually, the darkness fades as moonlight shines through rocky openings in the ceiling once more. Unsurprisingly, you discover the stream you had been following feeds into an underground lake. By the waters edge is a wooden sign pointing in two directions: along the shore line leading up to what appears to be a ferry and one back the way you came.',
         options: [
             {
-                text: 'Continue',
-                nextText: 2
+                text: 'SHORE LINE',
+                nextText: 26
+            },
+            {
+                text: 'RETURN',
+                nextText: 6
             }
         ]
     },
     {
         id: 9,
         img: 'Assets/Day1-Ring.jpg',
+        name: "inventoryAdd",
         text: 'A shiny object catches your eye. It appears to be a coin of some sort, fashioned out of a strange metal in the likeness of a Jack O\' Lantern. With your fingers, you turn it to its side and discover an inscription etched onto the back: "All Hallows Eve, a time to be free". It does not seem to hold any immediate or obvious value to you.',
         options: [
             {
@@ -524,23 +530,25 @@ const textNodes = [
         id: 25,
         img: 'Assets/Day1-Ring.jpg',
         name: "achilles",
-        text: 'Achilles nods, gesturing towards a cloak hanging over a railing on his front porch. "Before you leave, take that costume with you. Cover yourself as best as you can when you get to the portal. You\'ll have an easier time getting through that way. Or don\'t, see if I care." With that, Achilles pries open his book once more and pays you no more attention.',
+        text: 'Achilles nods, gesturing towards a basket sitting on a railing on his front porch. "Feel free to take that with you.. Nobody likes a party pooper. Especially not the gate guards.. and you\'ll need lots of candy if you intend to leave. It\'s a tradition thing." With that, Achilles pries open his book once more and pays you no more heed.',
         options: [
             {
-                text: 'TAKE GHOST COSTUME',
-                setState: { costume: true },
+                text: 'TAKE TRICK OR TREAT BASKET',
+                setState: { bag: true },
                 nextText: 26
             },
             {
                 text: 'IGNORE',
-                nextText: 26
+                nextText: 8
             }
 
         ]
     },
+    // FERRY
     {
         id: 26,
         img: 'Assets/Day1-Ring.jpg',
+        name: "Ferry",
         text: '*WIP*',
         options: [
             {
